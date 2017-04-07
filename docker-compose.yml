@@ -1,0 +1,19 @@
+php:
+  build: .
+  ports:
+   - "81:80"
+   - "444:443"
+  volumes:
+   - .:/var/www/html
+  links:
+   - db
+db:
+  image: mysql:5.7
+  volumes:
+   - /var/lib/mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=firewsi
+   - MYSQL_DATABASE=loja
+   - MYSQL_USER=user
+   - MYSQL_PASSWORD=firewsi
+

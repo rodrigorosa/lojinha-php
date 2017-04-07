@@ -1,3 +1,3 @@
 <?php
-$conexao = mysqli_connect('localhost', 'root', 'firewsi', 'loja');
+$conexao = mysqli_connect('db', 'root', 'firewsi', 'loja');
 
